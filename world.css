@@ -11,16 +11,16 @@ body {
 header-start
 ------------ */
 #container {
-    width: 100%;
     height: 100%;
+    width: 100%;
     display: grid;
     height: 100vw;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr, 2fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.8fr 0.2fr 4fr 0.8fr;
     grid-template-areas:
-        "background-banner background-banner background-banner background-banner background-banner background-banner background-banner background-banner background-banner background-banner background-banner background-banner"
-        "main-div main-fuction main-fuction main-fuction main-fuction main-fuction main-fuction main-fuction main-fuction main-fuction main-fuction main-fuction"
-        "footer footer footer footer footer footer footer footer footer footer footer footer"
+        "b b b b b b b b b b b b"
+        "m u u u u u u u u u u u"
+        "f f f f f f f f f f f f"
         /* "background-banner background-banner background-banner background-banner"
         "main-div top-blogs-1 top-blogs-1 top-blogs-1"
         "main-div top-blogs-2 top-blogs-2 top-blogs-2"
@@ -31,7 +31,7 @@ header-start
 }
 
 #background-banner {
-    grid-area: background-banner;
+    grid-area: b;
     background-color: #161616;
     display: flex;
     justify-content: space-between;
@@ -56,6 +56,10 @@ a {
 
 
 /* new button */
+#main-div {
+    grid-area: m;
+}
+
 .new-button {
     background-color: black;
     height: 230px;
@@ -81,14 +85,25 @@ a {
 
 /* main-section */
 #main-fuction {
-    grid-area: main-fuction;
+    grid-area: u;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    ;
 }
 
-.top-blogs-1 {
-    display: flex;
+/*------------
+ top blogs
+ -------------- */
+#top-blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
 }
+
+/* second-main-section */
+
 
 /* #top-blogs-1 {
     grid-area: top-blogs-1;
@@ -164,7 +179,7 @@ hr {
 
 footer {
     padding: 5% 0 0 0;
-    grid-area: footer;
+    grid-area: f;
     background-color: #161616;
     text-align: center;
     color: #FFFFFF;
